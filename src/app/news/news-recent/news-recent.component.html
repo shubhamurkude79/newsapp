@@ -1,0 +1,14 @@
+<div class="row">
+    <div class="col-md-5">
+        <app-news-list></app-news-list>
+    </div>
+    <div class="col-md-7">
+        <app-news-detail 
+            *ngIf="selectedNews; else infoText"
+            [news]="selectedNews">
+        </app-news-detail>
+        <ng-template #infoText>
+            <p class="exceptional-class">Please select a News.</p>
+        </ng-template>
+    </div>
+</div>

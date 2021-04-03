@@ -1,0 +1,56 @@
+<br>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-4">
+      <div class="product-image">
+        <div class="view hm-zoom z-depth-2" style="cursor: pointer">
+          <img [src]="news.imagePath" [alt]="news.name" width="100%" class="img-fluid rounded">
+        </div>
+        <div class="" style="margin-top:15px">
+          <ul class="list-group mb-3">
+            <li class="list-group-item d-flex justify-content-between lh-condensed">
+              <div>
+                <h6 class="my-0">News Category</h6>
+              </div>
+              <span class="text-muted" style="color:crimson !important"> {{product.productCategory}}</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between lh-condensed">
+              <div>
+                <h6 class="my-0">News by</h6>
+              </div>
+              <span class="text-muted" style="color:crimson !important">{{news.author}}</span>
+            </li>
+          </ul>
+          <button class="btn btn-primary" (click)="addToCart(product)">Add to  Read Later</button>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-8">
+      <div class="product-detail">
+        <h5 class="product-head">Details</h5>
+        <table class="table" cellspacing="0" style="max-height: 28px">
+          <tbody>
+            <tr>
+              <th scope="row">News Headline</th>
+              <td>{{news.name}}</td>
+            </tr>
+            <tr>
+              <th scope="row">View Full News On Medium</th>
+              <td><a href='{{product.productUrl}}'><span style="color: blue;">{{product.productUrl}}</span></a>
+             </td>
+            </tr>
+            <tr>
+              <th scope="row">Description</th>
+              <td style="white-space: pre-line;">{{news.description}}</td>
+            </tr>
+          
+            <tr>
+              <th scope="row">News Added on</th>
+              <td>{{news.publishedAt * 1000 | date}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

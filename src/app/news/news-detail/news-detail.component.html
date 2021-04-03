@@ -1,0 +1,31 @@
+<div class="detail-top-spacing">
+    <div class="row">
+        <div class="col-xs-8">
+            <h1>{{ news.name }}</h1>
+            <div class="posted-on">
+                <p>by <span>{{ news.author }}</span> on <span>{{ news.publishedAt }}</span></p>
+            </div>
+        </div>
+        <div class="col-xs-4">
+            <div class="dropdown button-position">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Manage News
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item" href="#">Edit News</a>
+                  <a class="dropdown-item" href="#">Delete News</a>
+                </div>
+              </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12">
+            <img [src]="news.imagePath" class="img-fluid" style="margin-bottom: 10px;" alt="news.name" />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 content-style">
+            <p>{{ news.description }}</p>
+        </div>
+    </div>
+</div>

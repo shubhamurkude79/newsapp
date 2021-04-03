@@ -1,9 +1,8 @@
 <app-header></app-header>
-<app-banner *ngIf="router.url=='/'"></app-banner>
 <div class="container">
   <div class="row">
     <div class="col-md-12">
-      <app-course-featured *ngIf="router.url=='/'"></app-course-featured>
+      <app-news-featured *ngIf="router.url=='/'"></app-news-featured>
       <router-outlet></router-outlet>
     </div>
   </div>

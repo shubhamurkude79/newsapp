@@ -1,0 +1,19 @@
+<section class="blog-list mtb-40">
+    <div class="container">
+      <h1>Latest News</h1>
+      <div class="row">
+        <div class="col-md-4" *ngFor="let news of news">
+            <div class="blog-box">
+              <img [src]="news.imagePath" class="img-responsive" alt="{{ news.name }}" />
+              <h3 class="list-group-item-heading">{{ news.name }}</h3>
+              <div class="posted-on">
+                <p>by <span>{{ news.author }}</span> on <span>{{ news.publishedAt }}</span></p>
+              </div>
+              <p class="list-group-item-text">{{ news.description }}</p>
+              <a routerLink="/news/{{news.id}}" routerLinkActive="active" class="btn btn-danger">Read more...</a>
+              <!-- <a [routerLink]="['/news', id ]">Read more...</a> -->
+            </div>
+          </div>
+      </div>
+    </div>
+  </section>

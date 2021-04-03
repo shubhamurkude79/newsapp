@@ -1,0 +1,15 @@
+<div class="row">
+  <div class="col-xs-12">
+    <button class="btn btn-success">News List</button>
+  </div>
+</div>
+<hr>
+<div class="row">
+  <div class="col-xs-12">
+    <h1>News</h1>
+    <app-news-item
+      *ngFor="let newsEl of news"
+      [news]="newsEl">
+    </app-news-item>
+  </div>
+</div>
